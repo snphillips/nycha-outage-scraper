@@ -106,9 +106,19 @@ PlannedElectric = {
   'IfNoOutageId': 'ctl00_ContentPlaceHolder1_electricOutagesList_panNoOutagesPlanned'
 }
 
+# =======================
+# GAS DICTIONARIES
+# =======================
+GasOutage = {
+  'CsvPath': 'outage-scrape-csvs/' + timeofscrape + '/gasoutage.csv',
+  'HtmlId': 'ctl00_ContentPlaceHolder1_gasOutagesList_grvOutages',
+  'IfOutageMessage': 'There are gas outages.',
+  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_gasOutagesList_panNoOutages'
+}
 
-# outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWaterWater, CurrentElevator, RestoredElevator, PlannedElevator, CurrentElectric, RestoredElectric, PlannedElectric]
-outages = [CurrentElectric, RestoredElectric, PlannedElectric]
+# outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWaterWater, CurrentElevator, RestoredElevator, PlannedElevator, CurrentElectric, RestoredElectric, PlannedElectric, GasOutage]
+outages = [GasOutage]
+
 
 
 
@@ -133,80 +143,6 @@ for everyoutage in outages:
 	  # Write the message to the csv
 	  csv.writerow(noOutageMessage)
 
-
-# # =======================
-# # ELECTRIC
-# # 1) name the path of the csv  that will be updated
-# # 2) use Pandas(pd) library to get the tables from html into dataframe(df)
-# # 3) "set" the csv with the dataframe
-# # 4) If there's no table present (b/c there's no outage) instead print the "no outage" message
-# # =======================
-
-
-
-
-# # html ids of tables we're interested in
-# currentID = 'ctl00_ContentPlaceHolder1_electricOutagesList_grvOutagesOpen'
-# restoredID = 'ctl00_ContentPlaceHolder1_electricOutagesList_grvOutagesClosedIn24Hours'
-# plannedID = 'ctl00_ContentPlaceHolder1_electricOutagesList_grvOutagesPlanned'
-# # html ids of divs if no tables are found (b/c there are no reported outages)
-# noCurrentID = 'ctl00_ContentPlaceHolder1_electricOutagesListpanNoOutagesOpen'
-# noRestoredID = "ctl00_ContentPlaceHolder1_electricOutagesList_panNoOutagesClosedIn24Hours"
-# noPlannedID = 'ctl00_ContentPlaceHolder1_electricOutagesList_panNoPlannedOutages'
-
-# #  CURRENT ELECTRIC OUTAGES
-# csvpath = 'outage-scrape-csvs/' + timeofscrape + '/electriccurrentoutage.csv'
-# if (soup.find("table", {"id": currentID})):
-#   print("There are current electric outages.")
-#   df = pd.read_html(url, header=0, attrs = {'id': currentID})[0]
-#   # printing dataframe for QA purposes
-#   print(df)
-#   df.to_csv(csvpath)
-# else:
-#   noOutageMessage = soup.find("div", {"id":nocurrentID}).find("div").find("div").text
-#   # Print for QA purposes
-#   print(noOutageMessage)
-#   # Create the csv
-#   csv = csv.writer(open(csvpath, 'w', newline=''))
-#   # Write the message to the csv
-#   csv.writerow(noOutageMessage)
-
-
-# #  RECENT ELECTRIC OUTAGES
-# csvpath = 'outage-scrape-csvs/' + timeofscrape + '/electricrestoredlast24hrs.csv'
-# if (soup.find("table", {"id": restoredID})):
-#   print("There were electric outages restored within last 24hrs.")
-#   df = pd.read_html(url, header=0, attrs = {'id': restoredID})[0]
-#   # printing dataframe for QA purposes
-#   print(df)
-#   df.to_csv(csvpath)
-# else:
-#   noOutageMessage = soup.find("div", {"id":noRestoredID}).find("div").text
-#   # Print for QA purposes
-#   print(noOutageMessage)
-#   # Create the csv
-#   csv = csv.writer(open(csvpath, 'w', newline=''))
-#   # Write the message to the csv
-#   csv.writerow([noOutageMessage])
-
-
-
-# #  UPCOMING ELECTRIC OUTAGES
-# csvpath = 'outage-scrape-csvs/' + timeofscrape + '/electricplannedoutages.csv'
-# if (soup.find("table", {"id": plannedID})):
-#   print("There are planned electric outages.")
-#   df = pd.read_html(url, header=0, attrs = {'id': plannedID})[0]
-#   # printing dataframe for QA purposes
-#   print(df)
-#   df.to_csv(csvpath)
-# else:
-#   noOutageMessage = soup.find("div", {"id":noPlannedID}).find("div").text
-#   # Print for QA purposes
-#   print(noOutageMessage)
-#   # Create the csv
-#   csv = csv.writer(open(csvpath, 'w', newline=''))
-#   # Write the message to the csv
-#   csv.writerow([noOutageMessage])
 
 
 
