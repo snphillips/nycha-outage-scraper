@@ -1,0 +1,58 @@
+,Address,Interruption,Planned,Reported On,Restoration Time,Impact
+0,"BARUCH - Building 11  79 BARUCH DRIVE  NEW YORK, NY 10002",Water,Planned,02/24/2020 8:00 AM,26 Hours,BuildingsUnitsPopulation  1130232
+1,"BREVOORT - Building 11  302 BAINBRIDGE STREET  BROOKLYN, NY 11233",Hot Water,Planned,02/24/2020 10:00 AM,4 Hours,BuildingsUnitsPopulation  170125
+2,"BROWNSVILLE - Building 02  296 SUTTER AVENUE  BROOKLYN, NY 11212",Heat,Planned,02/25/2020 9:00 AM,6 Hours,BuildingsUnitsPopulation  148133
+3,"CLINTON - Building 01  1505 PARK AVENUE  NEW YORK, NY 10029",Hot Water,Unplanned,02/24/2020 4:00 PM,5 Hours,BuildingsUnitsPopulation  1140321
+4,"EAST 165TH STREET-BRYANT AVENUE 1070 BRYANT AVENUE  BRONX, NY 10459",Heat,Unplanned,02/24/2020 8:15 AM,8 Hours,BuildingsUnitsPopulation  1624
+5,"EAST RIVER - Building 07  433 EAST 102ND STREET  NEW YORK, NY 10029",Heat  Hot Water,Planned  Planned,02/24/2020 9:00 AM,8 Hours,BuildingsUnitsPopulation  1120233
+6,"FARRAGUT - Entire Development  237 NASSAU STREET  BROOKLYN, NY 11201",Heat,Unplanned,02/24/2020 11:00 AM,5 Hours,"BuildingsUnitsPopulation  101,3903,237"
+7,"HAMMEL - Building 01  85-02 ROCKAWAY BEACH BOULEVARD  FAR ROCKAWAY, NY 11693",Water,Planned,02/24/2020 9:00 AM,29 Hours,BuildingsUnitsPopulation  151117
+8,"JACKSON - Entire Development  3080 PARK AVENUE  BRONX, NY 10451",Heat  Hot Water  Water,Planned  Planned  Planned,02/25/2020 8:00 AM,10 Hours,"BuildingsUnitsPopulation  78682,092"
+9,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 15  1750 WATSON AVENUE  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  15098
+10,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 14  1755 BRUCKNER BOULEVARD  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  154124
+11,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 13  1040 ROSEDALE AVENUE  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  154113
+12,"JUSTICE SONIA SOTOMAYOR HOUSES - Entire Development  1055 ROSEDALE AVENUE  BRONX, NY 10472",Heat,Planned,02/25/2020 8:00 AM,6 Hours,"BuildingsUnitsPopulation  311,4973,156"
+13,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 23  1060 BEACH AVENUE  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  154116
+14,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 18  1085 BEACH AVENUE  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  15297
+15,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 12  1744 WATSON AVENUE  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  151113
+16,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 16  1760 WATSON AVENUE  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  154108
+17,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 20  1775 BRUCKNER BOULEVARD  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  15497
+18,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 17  1780 WATSON AVENUE  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  154116
+19,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 19  1781 BRUCKNER BOULEVARD  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  154126
+20,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 21  1791 BRUCKNER BOULEVARD  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  154115
+21,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 22  1805 BRUCKNER BOULEVARD  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  15499
+22,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 24  1810 WATSON AVENUE  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  148105
+23,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 27  1815 BRUCKNER BOULEVARD  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  154115
+24,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 25  1824 WATSON AVENUE  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  154115
+25,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 28  1825 BRUCKNER BOULEVARD  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  154111
+26,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 26  1836 WATSON AVENUE  BRONX, NY 10472",Water,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  154124
+27,"LA GUARDIA - Building 01  45 RUTGERS STREET  NEW YORK, NY 10002",Water,Unplanned,02/25/2020 11:33 AM,0 Hours,BuildingsUnitsPopulation  1124282
+28,"LAFAYETTE - Building 04  345 CLASSON AVENUE  BROOKLYN, NY 11205",Heat,Planned,02/25/2020 9:00 AM,5 Hours,BuildingsUnitsPopulation  1154438
+29,"LAFAYETTE - Building 02  456 DEKALB AVENUE  BROOKLYN, NY 11205",Heat,Planned,02/24/2020 9:00 AM,6 Hours,BuildingsUnitsPopulation  1154458
+30,"MARLBORO - Entire Development  29 AVENUE W  BROOKLYN, NY 11223",Heat  Hot Water,Planned  Planned,02/24/2020 9:00 AM,9 Hours,"BuildingsUnitsPopulation  301,7654,023"
+31,"MITCHEL - Entire Development  303 EAST 135TH STREET  BRONX, NY 10454",Heat  Hot Water,Planned  Planned,02/24/2020 9:00 AM,11 Hours,"BuildingsUnitsPopulation  111,7323,920"
+32,"MONROE - Entire Development  1785 STORY AVENUE  BRONX, NY 10473",Heat  Hot Water,Unplanned  Unplanned,02/25/2020 3:00 AM,3 Hours,"BuildingsUnitsPopulation  131,1022,659"
+33,"QUEENSBRIDGE SOUTH - Building 23  41-01 VERNON BOULEVARD  LONG ISLAND CITY, NY 11101",Hot Water,Planned,02/25/2020 9:00 AM,9 Hours,BuildingsUnitsPopulation  1180344
+34,"RAVENSWOOD - Building 19  14-01 36TH AVENUE  ASTORIA, NY 11106",Heat,Unplanned,02/25/2020 8:00 AM,4 Hours,BuildingsUnitsPopulation  14895
+35,"RED HOOK EAST 16 MILL STREET  BROOKLYN, NY 11231  Line A",Water,Unplanned,02/25/2020 11:28 AM,1 Hours,BuildingsUnitsPopulation  166
+36,"RED HOOK EAST 16 MILL STREET  BROOKLYN, NY 11231  Line C",Water,Unplanned,02/25/2020 12:34 PM,3 Hours,BuildingsUnitsPopulation  1614
+37,"SAINT NICHOLAS - Building 12  230 WEST 131ST STREET  NEW YORK, NY 10027",Hot Water,Planned,02/24/2020 9:00 AM,4 Hours,BuildingsUnitsPopulation  1105219
+38,"SAINT NICHOLAS - Building 08  2410 F DOUGLASS BOULEVARD  NEW YORK, NY 10027",Hot Water,Planned,02/24/2020 9:00 AM,8 Hours,BuildingsUnitsPopulation  1108240
+39,"SAINT NICHOLAS 255 WEST 127TH STREET  NEW YORK, NY 10027  Line G",Water,Unplanned,02/24/2020 9:30 AM,6 Hours,BuildingsUnitsPopulation  11434
+40,"SAINT NICHOLAS 255 WEST 127TH STREET  NEW YORK, NY 10027  Line H",Water,Unplanned,02/24/2020 9:48 AM,6 Hours,BuildingsUnitsPopulation  11447
+41,"SAMUEL (CITY) 159 WEST 143RD STREET  NEW YORK, NY 10030  Line B",Water,Unplanned,02/24/2020 9:03 AM,0 Hours,BuildingsUnitsPopulation  1514
+42,"SMITH 182 SOUTH STREET  NEW YORK, NY 10038  Line F",Water,Unplanned,02/25/2020 4:36 PM,2 Hours,BuildingsUnitsPopulation  11620
+43,"SUMNER - Building 12  44 MARCUS GARVEY BOULEVARD  BROOKLYN, NY 11206",Heat,Planned,02/24/2020 9:00 AM,6 Hours,BuildingsUnitsPopulation  178165
+44,"TAFT - Building 02  1345 5TH AVENUE  NEW YORK, NY 10029",Water,Unplanned,02/23/2020 9:30 AM,48 Hours,BuildingsUnitsPopulation  1150373
+45,"TAFT - Building 03  1365 5TH AVENUE  NEW YORK, NY 10029",Water,Unplanned,02/23/2020 9:30 AM,48 Hours,BuildingsUnitsPopulation  1201294
+46,"TAFT - Building 01  1694 MADISON AVENUE  NEW YORK, NY 10029",Water,Unplanned,02/23/2020 9:30 AM,48 Hours,BuildingsUnitsPopulation  1150282
+47,"TAFT - Entire Development  1694 MADISON AVENUE  NEW YORK, NY 10029",Water,Unplanned,02/23/2020 9:30 AM,19 Hours,"BuildingsUnitsPopulation  101,4702,997"
+48,"TOMPKINS - Building 04  200 THROOP AVENUE  BROOKLYN, NY 11206",Heat,Planned,02/24/2020 9:00 AM,10 Hours,BuildingsUnitsPopulation  1202538
+49,"WAGNER - Building 21  350 EAST 124TH STREET  NEW YORK, NY 10035",Hot Water,Unplanned,02/24/2020 6:14 PM,12 Hours,BuildingsUnitsPopulation  1125267
+50,"WASHINGTON - Building 03  1895 2ND AVENUE  NEW YORK, NY 10029",Hot Water,Unplanned,02/23/2020 7:00 AM,56 Hours,BuildingsUnitsPopulation  1109226
+51,"WILLIAMSBURG - Building 19  195 SCHOLES STREET  BROOKLYN, NY 11206",Heat  Hot Water,Planned  Planned,02/25/2020 9:00 AM,10 Hours,BuildingsUnitsPopulation  187144
+52,"WILLIAMSBURG - Building 15  197 TEN EYCK WALK  BROOKLYN, NY 11206",Heat  Hot Water,Planned  Planned,02/25/2020 9:00 AM,8 Hours,BuildingsUnitsPopulation  195165
+53,"WILLIAMSBURG - Building 17  200 TEN EYCK WALK  BROOKLYN, NY 11206",Heat  Hot Water,Planned  Planned,02/25/2020 9:00 AM,8 Hours,BuildingsUnitsPopulation  168118
+54,"WILLIAMSBURG - Building 20  215 SCHOLES STREET  BROOKLYN, NY 11206",Heat  Hot Water,Planned  Planned,02/25/2020 9:00 AM,9 Hours,BuildingsUnitsPopulation  192153
+55,"WILLIAMSBURG - Building 16  219 TEN EYCK WALK  BROOKLYN, NY 11206",Heat  Hot Water,Planned  Planned,02/25/2020 9:00 AM,8 Hours,BuildingsUnitsPopulation  180146
+56,"WILLIAMSBURG - Building 18  222 TEN EYCK WALK  BROOKLYN, NY 11206",Heat  Hot Water,Planned  Planned,02/25/2020 9:00 AM,9 Hours,BuildingsUnitsPopulation  168138
