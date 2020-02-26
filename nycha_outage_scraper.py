@@ -35,32 +35,10 @@ currentfolder = Path("outage-scrape-csvs/" + timeofscrape).mkdir(parents=True, e
 
 
 
-
-# =======================
-# HEAT
-# 1) name the path of the csv  that will be updated
-# 2) use Pandas(pd) library to get the tables from html into dataframe(df)
-# 3) "set" the worksheet with the dataframe
-# 4) If there's no table present (b/c there's no outage) instead print the "no outage" message
-# =======================
-
-# # html ids of tables we're interested in
-# currentID = 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_grvOutagesOpen'
-# restoredID = 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_grvOutagesClosedIn24Hours'
-# plannedID = 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_grvOutagesPlanned'
-
-# # html ids of divs if no tables are found (b/c there are no reported outages)
-# noCurrentID = 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_panNoOutagesOpen'
-# noRestoreID = 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_panNoOutagesClosedIn24Hours'
-# noPlannedID = 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_panNoOutagesPlanned'
-
-
-
+# HEAT/HOT WATER/WATER DICTIONARIES
 CurrentHeatHotWaterWater = {
   'CsvPath': 'outage-scrape-csvs/' + timeofscrape + '/heathotwatercurrentoutage.csv',
   'HtmlId': 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_grvOutagesOpen',
-  'OutageType': 'heathotwaterwater',
-  'OutageStatus': 'current',
   'IfOutageMessage': 'There are current heat/hot water/water outages.',
   'IfNoOutageId': 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_panNoOutagesOpen'
 }
@@ -68,8 +46,6 @@ CurrentHeatHotWaterWater = {
 RestoredHeatHotWaterWater = {
   'CsvPath': 'outage-scrape-csvs/' + timeofscrape + '/heathotwaterrestoredoutage.csv',
   'HtmlId': 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_grvOutagesClosedIn24Hours',
-  'OutageType': 'heathotwaterwater',
-  'OutageStatus': 'restored',
   'IfOutageMessage': 'There were heat & hot water outages restored within last 24hrs.',
   'IfNoOutageId': 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_panNoOutagesClosedIn24Hours'
 }
@@ -77,24 +53,48 @@ RestoredHeatHotWaterWater = {
 PlannedHeatHotWaterWater = {
   'CsvPath': 'outage-scrape-csvs/' + timeofscrape + '/heathotwaterplannedoutages.csv',
   'HtmlId': 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_grvOutagesPlanned',
-  'OutageType': 'heathotwaterwater',
-  'OutageStatus': 'planned',
   'IfOutageMessage': 'There are heat & hot water outages planned.',
   'IfNoOutageId': 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_panNoOutagesPlanned'
 }
 
-outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWaterWater]
+# ELEVATOR DICTIONARIES
+CurrentElevator = {
+  'CsvPath': 'outage-scrape-csvs/' + timeofscrape + '/elevatorcurrentoutage.csv',
+  'HtmlId': 'ctl00_ContentPlaceHolder1_elevatorOutagesList_grvOutagesOpen',
+  'IfOutageMessage': 'There are current elevator outages.',
+  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_elevatorOutagesListpanNoOutagesOpen'
+}
+
+RestoredElevator = {
+  'CsvPath': 'outage-scrape-csvs/' + timeofscrape + '/elevatorrestoredoutage.csv',
+  'HtmlId': 'ctl00_ContentPlaceHolder1_elevatorOutagesList_grvOutagesClosedIn24Hours',
+  'IfOutageMessage': 'There were elevator outages restored within last 24hrs.',
+  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_elevatorOutagesList_panNoPlannedOutages'
+}
+
+PlannedElevator = {
+  'CsvPath': 'outage-scrape-csvs/' + timeofscrape + '/elevatorplannedoutages.csv',
+  'HtmlId': 'ctl00_ContentPlaceHolder1_elevatorOutagesList_grvOutagesPlanned',
+  'IfOutageMessage': 'There are elevator outages planned.',
+  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_elevatorOutagesList_panNoOutagesPlanned'
+}
 
 
-#  SCRAPING ALL HEAT OUTAGES
+outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWaterWater, CurrentElevator, RestoredElevator, PlannedElevator]
 
+
+
+#  Iteraring over the outages list of dictionaries
 for everyoutage in outages:
 
 	if (soup.find("table", {"id": everyoutage['HtmlId']})):
+	  # Print for QA purposes
 	  print( everyoutage['IfOutageMessage'] )
+	  # Create dataframe(df) of the HTML table in question, using pandas
 	  df = pd.read_html(url, header=0, attrs = {'id': everyoutage['HtmlId']})[0]
 	  # printing dataframe for QA purposes
 	  print(df)
+	  # create a csv and insert the dataframe(df)
 	  df.to_csv( everyoutage['CsvPath'] )
 	else:
 	  noOutageMessage = soup.find("div", {"id": everyoutage['IfNoOutageId']}).find("div").find("div").text
@@ -104,66 +104,6 @@ for everyoutage in outages:
 	  csv = csv.writer(open(csvpath, 'w', newline=''))
 	  # Write the message to the csv
 	  csv.writerow(noOutageMessage)
-
-
-
-
-
-# #  CURRENT HEAT OUTAGES
-# csvpath = 'outage-scrape-csvs/' + timeofscrape + '/heathotwatercurrentoutage.csv'
-# if (soup.find("table", {"id": currentID})):
-#   print("There are heat & hot water current outages.")
-#   df = pd.read_html(url, header=0, attrs = {'id': currentID})[0]
-#   # printing dataframe for QA purposes
-#   print(df)
-#   df.to_csv(csvpath)
-# else:
-#   noOutageMessage = soup.find("div", {"id":nocurrentID}).find("div").find("div").text
-#   # Print for QA purposes
-#   print(noOutageMessage)
-#   # Create the csv
-#   csv = csv.writer(open(csvpath, 'w', newline=''))
-#   # Write the message to the csv
-#   csv.writerow(noOutageMessage)
-
-
-
-# #  RECENTLY RESTORED HEAT OUTAGES
-# csvpath = 'outage-scrape-csvs/' + timeofscrape + '/heathotwaterrestoredlast24hrs.csv'
-# if (soup.find("table", {"id": restoredID})):
-#   print("There were heat & hot water outages restored within last 24hrs.")
-#   df = pd.read_html(url, header=0, attrs = {'id': restoredID})[0]
-#   # printing dataframe for QA purposes
-#   print(df)
-#   df.to_csv(csvpath)
-# else:
-#   noOutageMessage = soup.find("div", {"id":noRestoreID}).find("div").find("div").text
-#   # Print for QA purposes
-#   print(noOutageMessage)
-#   # Create the csv
-#   csv = csv.writer(open(csvpath, 'w', newline=''))
-#   # Write the message to the csv
-#   csv.writerow(noOutageMessage)
-
-
-
-# #  PLANNED HEAT OUTAGES
-# csvpath = 'outage-scrape-csvs/' + timeofscrape + '/heathotwaterplannedoutages.csv'
-# if (soup.find("table", {"id": plannedID})):
-#   print("There are planned heat & hot water outages.")
-#   df = pd.read_html(url, header=0, attrs = {'id': restoredID})[0]
-#   # printing dataframe for QA purposes
-#   print(df)
-#   df.to_csv(csvpath)
-# else:
-#   noOutageMessage = soup.find("div", {"id":noPlannedID}).find("div").find("div").text
-#    # Print for QA purposes
-#   print(noOutageMessage)
-#   # Create the csv
-#   csv = csv.writer(open(csvpath, 'w', newline=''))
-#   # Write the message to the csv
-#   csv.writerow(noOutageMessage)
-
 
 
 # =======================
@@ -183,24 +123,6 @@ for everyoutage in outages:
 # noCurrentID = 'ctl00_ContentPlaceHolder1_elevatorOutagesListpanNoOutagesOpen'
 # noRestoredID = "ctl00_ContentPlaceHolder1_elevatorOutagesList_panNoOutagesClosedIn24Hours"
 # noPlannedID = 'ctl00_ContentPlaceHolder1_elevatorOutagesList_panNoPlannedOutages'
-
-
-# #  CURRENT ELEVATOR OUTAGES
-# csvpath = 'outage-scrape-csvs/' + timeofscrape + '/elevatorcurrentoutage.csv'
-# if (soup.find("table", {"id": currentID})):
-#   print("There are current elevator outages.")
-#   df = pd.read_html(url, header=0, attrs = {'id': currentID})[0]
-#   # printing dataframe for QA purposes
-#   print(df)
-#   df.to_csv(csvpath)
-# else:
-#   noOutageMessage = soup.find("div", {"id":nocurrentID}).find("div").find("div").text
-#   # Print for QA purposes
-#   print(noOutageMessage)
-#   # Create the csv
-#   csv = csv.writer(open(csvpath, 'w', newline=''))
-#   # Write the message to the csv
-#   csv.writerow(noOutageMessage)
 
 
 # #  RESTORED ELEVATOR OUTAGES
