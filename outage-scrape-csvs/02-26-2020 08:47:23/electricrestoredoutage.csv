@@ -1,0 +1,4 @@
+,Address,Interruption,Planned,Reported On,Restoration Time,Impact
+0,"ISAACS - Building 02  1830 1ST AVENUE  NEW YORK, NY 10128",Electric PARTIAL SERVICE,Planned,02/24/2020 8:00 AM,29 Hours,BuildingsUnitsPopulation  1215397
+1,"JACKSON - Building 02  300 EAST 158TH STREET  BRONX, NY 10451",Electric NO SERVICE,Planned,02/25/2020 8:00 AM,9 Hours,BuildingsUnitsPopulation  1123317
+2,"JACKSON - Building 02  300 EAST 158TH STREET  BRONX, NY 10451",Electric NO SERVICE,Unplanned,02/25/2020 11:00 AM,5 Hours,BuildingsUnitsPopulation  1123317

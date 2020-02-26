@@ -3,13 +3,13 @@
 # Import libraries
 # =======================
 import requests
-import csv
+from bs4 import BeautifulSoup
 from datetime import datetime
 import pytz
 from pytz import timezone
-from bs4 import BeautifulSoup
-import pandas as pd
+import csv
 from pathlib import Path
+import pandas as pd
 
 
 # Fetch the html file
@@ -107,7 +107,7 @@ PlannedElectric = {
 }
 
 # =======================
-# GAS DICTIONARIES
+# GAS DICTIONARY
 # =======================
 GasOutage = {
   'CsvPath': 'outage-scrape-csvs/' + timeofscrape + '/gasoutage.csv',
@@ -116,9 +116,7 @@ GasOutage = {
   'IfNoOutageId': 'ctl00_ContentPlaceHolder1_gasOutagesList_panNoOutages'
 }
 
-# outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWaterWater, CurrentElevator, RestoredElevator, PlannedElevator, CurrentElectric, RestoredElectric, PlannedElectric, GasOutage]
-outages = [GasOutage]
-
+outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWaterWater, CurrentElevator, RestoredElevator, PlannedElevator, CurrentElectric, RestoredElectric, PlannedElectric]
 
 
 
@@ -126,7 +124,7 @@ outages = [GasOutage]
 for everyoutage in outages:
 
 	if (soup.find("table", {"id": everyoutage['HtmlId']})):
-	  # Print for QA purposes
+	  # Print to terminal for QA purposes
 	  print( everyoutage['IfOutageMessage'] )
 	  # Create dataframe(df) of the HTML table in question, using pandas
 	  df = pd.read_html(url, header=0, attrs = {'id': everyoutage['HtmlId']})[0]
@@ -136,7 +134,7 @@ for everyoutage in outages:
 	  df.to_csv( everyoutage['CsvPath'] )
 	else:
 	  noOutageMessage = soup.find("div", {"id": everyoutage['IfNoOutageId']}).find("div").find("div").text
-	  # Print for QA purposes
+	  # Print to terminal for QA purposes
 	  print(noOutageMessage)
 	  # Create the csv
 	  csv = csv.writer(open(csvpath, 'w', newline=''))
@@ -144,36 +142,26 @@ for everyoutage in outages:
 	  csv.writerow(noOutageMessage)
 
 
+# =======================
+# GAS OUTAGE
+# gas is a little different than the others, so it gets it's own function
+# =======================
+if (soup.find("table", {"id": GasOutage['HtmlId']})):
+  # Print to terminal for QA purposes
+  print( GasOutage['IfOutageMessage'] )
+  # Create dataframe(df) of the HTML table in question, using pandas
+  df = pd.read_html(url, header=0, attrs = {'id': GasOutage['HtmlId']})[0]
+  # printing dataframe for QA purposes
+  print(df)
+  # create a csv and insert the dataframe(df)
+  df.to_csv( GasOutage['CsvPath'] )
+else:
+  noOutageMessage = soup.find("div", {"id": GasOutage['IfNoOutageId']}).find("div").find("div").text
+  # Print to terminal for QA purposes
+  print(noOutageMessage)
+  # Create the csv
+  csv = csv.writer(open(csvpath, 'w', newline=''))
+  # Write the message to the csv
+  csv.writerow(noOutageMessage)
 
-
-# # =======================
-# # GAS
-# # 1) name the path of the csv that will be created
-# # 2) use Pandas(pd) library to get the tables from html into dataframe(df)
-# # 3) update the csv with the first dataframe(df[0])
-# # 4) If there's no html table present (b/c there's no outage) instead print the "no outage" message
-# # =======================
-
-# # html id of the table we're interested in and the id if _no table_ is seen
-# gasID = "ctl00_ContentPlaceHolder1_gasOutagesList_grvOutages"
-# noGasID = "ctl00_ContentPlaceHolder1_gasOutagesList_panNoOutages"
-
-
-# #  GAS OUTAGES
-# csvpath = 'outage-scrape-csvs/' + timeofscrape + '/gas.csv'
-# if (soup.find("table", {"id": currentID})):
-#   print("There are gas outages.")
-#   df = pd.read_html(url, header=0, attrs = {'id': gasID})[0]
-#   # printing dataframe for QA purposes
-#   print(df)
-#   # adding dataframe to csv
-#   df.to_csv(csvpath)
-# else:
-#   noOutageMessage = soup.find("div", {"id":currentID}).find("div").find("div").text
-#   # Print for QA purposes
-#   print(noOutageMessage)
-#   # Create the csv
-#   csv = csv.writer(open(csvpath, 'w', newline=''))
-#   # Write the message to the csv
-#   csv.writerow([noOutageMessage])
 
