@@ -1,0 +1,23 @@
+,Address,Interruption,Planned,Reported On,Restoration Time,Impact
+0,"344 EAST 28TH STREET - Entire Development  344 EAST 28TH STREET  MANHATTAN, NY 10016",Heat  Hot Water,Unplanned  Unplanned,02/25/2020 5:00 PM,9 Hours,BuildingsUnitsPopulation  1225430
+1,"CONEY ISLAND I (SITES 4 & 5) - Building 01  2925 WEST 27TH STREET  BROOKLYN, NY 11224",Water,Planned,02/26/2020 8:30 AM,8 Hours,"BuildingsUnitsPopulation  13761,005"
+2,"CONEY ISLAND I (SITES 4 & 5) - Entire Development  2925 WEST 27TH STREET  BROOKLYN, NY 11224",Heat,Planned,02/26/2020 8:30 AM,7 Hours,"BuildingsUnitsPopulation  23761,005"
+3,"EAST RIVER - Building 07  433 EAST 102ND STREET  NEW YORK, NY 10029",Hot Water,Planned,02/26/2020 9:00 AM,9 Hours,BuildingsUnitsPopulation  1120233
+4,"EASTCHESTER GARDENS 3020 YATES AVENUE  BRONX, NY 10469  Line C",Water,Unplanned,02/26/2020 2:51 PM,5 Hours,BuildingsUnitsPopulation  1717
+5,"GARVEY (GROUP A) - Building 03  1400 EAST NEW YORK AVENUE  BROOKLYN, NY 11212",Heat,Planned,02/26/2020 10:00 AM,9 Hours,BuildingsUnitsPopulation  1117355
+6,"JEFFERSON - Building 04  2235 1ST AVENUE  NEW YORK, NY 10029",Hot Water,Unplanned,02/25/2020 5:01 PM,10 Hours,BuildingsUnitsPopulation  154159
+7,"RED HOOK EAST - Building 26  110 WEST 9TH STREET  BROOKLYN, NY 11231",Heat  Hot Water,Planned  Planned,02/26/2020 9:00 AM,7 Hours,BuildingsUnitsPopulation  100
+8,"RED HOOK EAST - Building 27  120 WEST 9TH STREET  BROOKLYN, NY 11231",Heat  Hot Water,Planned  Planned,02/26/2020 9:00 AM,7 Hours,BuildingsUnitsPopulation  100
+9,"RED HOOK EAST - Building 01  604 CLINTON STREET  BROOKLYN, NY 11231",Heat  Hot Water,Planned  Planned,02/26/2020 9:00 AM,7 Hours,BuildingsUnitsPopulation  1114253
+10,"RED HOOK EAST - Building 03  624 CLINTON STREET  BROOKLYN, NY 11231",Heat  Hot Water,Planned  Planned,02/26/2020 9:00 AM,7 Hours,BuildingsUnitsPopulation  1120223
+11,"RED HOOK EAST - Building 04  92 CENTRE MALL  BROOKLYN, NY 11231",Heat  Hot Water,Planned  Planned,02/26/2020 9:00 AM,6 Hours,BuildingsUnitsPopulation  196181
+12,"RED HOOK EAST - Building 02  93 CENTRE MALL  BROOKLYN, NY 11231",Heat  Hot Water,Planned  Planned,02/26/2020 9:00 AM,7 Hours,BuildingsUnitsPopulation  196194
+13,"RIIS II - Building 18  90 AVENUE D  NEW YORK, NY 10009",Heat  Hot Water,Planned  Planned,02/26/2020 9:00 AM,10 Hours,BuildingsUnitsPopulation  1124249
+14,"SACKWERN - Building 04  715 NOBLE AVENUE  BRONX, NY 10473",Hot Water,Unplanned,02/26/2020 5:54 PM,5 Hours,BuildingsUnitsPopulation  159124
+15,"TAFT - Building 02  1345 5TH AVENUE  NEW YORK, NY 10029",Water,Unplanned,02/25/2020 11:42 AM,22 Hours,BuildingsUnitsPopulation  1150373
+16,"TAFT - Building 03  1365 5TH AVENUE  NEW YORK, NY 10029",Water,Unplanned,02/25/2020 11:51 AM,22 Hours,BuildingsUnitsPopulation  1201295
+17,"TAFT - Building 04  1385 5TH AVENUE  NEW YORK, NY 10029",Water,Unplanned,02/25/2020 11:16 AM,22 Hours,BuildingsUnitsPopulation  1150290
+18,"TAFT - Building 01  1694 MADISON AVENUE  NEW YORK, NY 10029",Water,Unplanned,02/25/2020 11:39 AM,22 Hours,BuildingsUnitsPopulation  1150282
+19,"TAFT 1734 MADISON AVENUE  NEW YORK, NY 10029",Water,Unplanned,02/25/2020 11:19 AM,22 Hours,BuildingsUnitsPopulation  1147377
+20,"TAFT 1735 MADISON AVENUE  NEW YORK, NY 10029",Water,Unplanned,02/25/2020 11:00 AM,22 Hours,BuildingsUnitsPopulation  1150369
+21,"TAFT 70 EAST 115TH STREET  NEW YORK, NY 10029",Water,Unplanned,02/25/2020 11:00 AM,22 Hours,BuildingsUnitsPopulation  1186333

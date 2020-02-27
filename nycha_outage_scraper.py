@@ -116,52 +116,68 @@ GasOutage = {
   'IfNoOutageId': 'ctl00_ContentPlaceHolder1_gasOutagesList_panNoOutages'
 }
 
-outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWaterWater, CurrentElevator, RestoredElevator, PlannedElevator, CurrentElectric, RestoredElectric, PlannedElectric]
+# outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWaterWater, CurrentElevator, RestoredElevator, PlannedElevator, CurrentElectric, RestoredElectric, PlannedElectric, GasOutage]
+outages = [CurrentHeatHotWaterWater]
 
 
 
 #  Iteraring over the outages list of dictionaries
 for everyoutage in outages:
 
-	if (soup.find("table", {"id": everyoutage['HtmlId']})):
-	  # Print to terminal for QA purposes
-	  print( everyoutage['IfOutageMessage'] )
-	  # Create dataframe(df) of the HTML table in question, using pandas
-	  df = pd.read_html(url, header=0, attrs = {'id': everyoutage['HtmlId']})[0]
-	  # printing dataframe for QA purposes
-	  print(df)
-	  # create a csv and insert the dataframe(df)
-	  df.to_csv( everyoutage['CsvPath'] )
-	else:
-	  noOutageMessage = soup.find("div", {"id": everyoutage['IfNoOutageId']}).find("div").find("div").text
-	  # Print to terminal for QA purposes
-	  print(noOutageMessage)
-	  # Create the csv
-	  csv = csv.writer(open(csvpath, 'w', newline=''))
-	  # Write the message to the csv
-	  csv.writerow(noOutageMessage)
+  if (soup.find("table", {"id": everyoutage['HtmlId']})):
+    # Print to terminal for QA purposes
+    print( everyoutage['IfOutageMessage'] )
 
 
-# =======================
-# GAS OUTAGE
-# gas is a little different than the others, so it gets it's own function
-# =======================
-if (soup.find("table", {"id": GasOutage['HtmlId']})):
-  # Print to terminal for QA purposes
-  print( GasOutage['IfOutageMessage'] )
-  # Create dataframe(df) of the HTML table in question, using pandas
-  df = pd.read_html(url, header=0, attrs = {'id': GasOutage['HtmlId']})[0]
-  # printing dataframe for QA purposes
-  print(df)
-  # create a csv and insert the dataframe(df)
-  df.to_csv( GasOutage['CsvPath'] )
-else:
-  noOutageMessage = soup.find("div", {"id": GasOutage['IfNoOutageId']}).find("div").find("div").text
-  # Print to terminal for QA purposes
-  print(noOutageMessage)
-  # Create the csv
-  csv = csv.writer(open(csvpath, 'w', newline=''))
-  # Write the message to the csv
-  csv.writerow(noOutageMessage)
+    # Before turning into dataframe, must sort out the impact issue
+    impactTable = soup.find("table", {"id": everyoutage['HtmlId']}).find("table", {"class": "nested"})
+    print(impactTable)
+    impactTableHeaders = impactTable.find_all("th")
+    print(impactTableHeaders)
+    impactTableData = impactTable.find_all("td")
+    print(impactTableData)
+
+
+
+    # Create dataframe(df) of the HTML table in question, using pandas
+    df = pd.read_html(url, header=0, attrs = {'id': everyoutage['HtmlId']})[0]
+    # printing dataframe for QA purposes
+    print(df)
+
+
+
+    # create a csv and insert the dataframe(df)
+    df.to_csv( everyoutage['CsvPath'] )
+  else:
+    noOutageMessage = soup.find("div", {"id": everyoutage['IfNoOutageId']}).find("div").find("div").text
+    # Print to terminal for QA purposes
+    print(noOutageMessage)
+    # Create the csv
+    csv = csv.writer(open(csvpath, 'w', newline=''))
+    # Write the message to the csv
+    csv.writerow(noOutageMessage)
+
+
+# # =======================
+# # GAS OUTAGE
+# # gas is a little different than the others(no impact column), so it's own function
+# # =======================
+# if (soup.find("table", {"id": GasOutage['HtmlId']})):
+#   # Print to terminal for QA purposes
+#   print( GasOutage['IfOutageMessage'] )
+#   # Create dataframe(df) of the HTML table in question, using pandas
+#   df = pd.read_html(url, header=0, attrs = {'id': GasOutage['HtmlId']})[0]
+#   # printing dataframe for QA purposes
+#   print(df)
+#   # create a csv and insert the dataframe(df)
+#   df.to_csv( GasOutage['CsvPath'] )
+# else:
+#   noOutageMessage = soup.find("div", {"id": GasOutage['IfNoOutageId']}).find("div").find("div").text
+#   # Print to terminal for QA purposes
+#   print(noOutageMessage)
+#   # Create the csv
+#   csv = csv.writer(open(csvpath, 'w', newline=''))
+#   # Write the message to the csv
+#   csv.writerow(noOutageMessage)
 
 
