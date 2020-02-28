@@ -41,7 +41,7 @@ CurrentHeatHotWaterWater = {
   'CsvPath': 'outage-scrape-csvs/' + timeofscrape + '/heathotwatercurrentoutage.csv',
   'HtmlId': 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_grvOutagesOpen',
   'IfOutageMessage': 'There are current heat/hot water/water outages.',
-  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_panNoOutagesOpen'
+  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_panNoOpenOutages'
 }
 
 RestoredHeatHotWaterWater = {
@@ -117,67 +117,58 @@ GasOutage = {
 }
 
 # outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWaterWater, CurrentElevator, RestoredElevator, PlannedElevator, CurrentElectric, RestoredElectric, PlannedElectric, GasOutage]
-outages = [CurrentHeatHotWaterWater]
+outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWaterWater]
 
 
 
-#  Iteraring over the outages list of dictionaries
+# =======================
+# Iteraring over the outages list of dictionaries
+# =======================
 for everyoutage in outages:
+    if (soup.find("table", {"id": everyoutage['HtmlId']})):
+      # Print to terminal for QA purposes
+      print( everyoutage['IfOutageMessage'] )
+      # Create dataframe(df) of the HTML table in question, using pandas
+      df = pd.read_html(url, header=0, attrs = {'id': everyoutage['HtmlId']})[0]
+      # printing dataframe for QA purposes
+      print(df)
+      # create a csv and insert the dataframe(df)
+      df.to_csv( everyoutage['CsvPath'] )
+    else:
+      noOutageMessage = soup.find("div", {"id": everyoutage['IfNoOutageId']}).find("div").text
+      # Print to terminal for QA purposes
+      print(noOutageMessage)
+      # Create the csv
+      csv = csv.writer(open(everyoutage['CsvPath'], 'w', newline=''))
+      # Write the message to the csv
+      csv.writerow([noOutageMessage])
 
-  if (soup.find("table", {"id": everyoutage['HtmlId']})):
-    # Print to terminal for QA purposes
-    print( everyoutage['IfOutageMessage'] )
 
 
-    # Before turning into dataframe, must sort out the impact issue
+
+
+
+
+    # Before creating the dataframe, we must sort out the issue of the nested impact table
     impactTable = soup.find("table", {"id": everyoutage['HtmlId']}).find("table", {"class": "nested"})
-    print(impactTable)
+    # print("impactTable", impactTable)
     impactTableHeaders = impactTable.find_all("th")
-    print(impactTableHeaders)
+
+    for impactTableHeader in impactTableHeaders:
+      impactTableHeader = str(impactTableHeader.text) + '/'
+      print("impactTableHeader", impactTableHeader)
+
+
     impactTableData = impactTable.find_all("td")
-    print(impactTableData)
+    print("impactTableData", impactTableData)
+
+    for impactTableDatum in impactTableData:
+      impactTableDatum = str(impactTableDatum.text) + '/'
+      print("impactTableData", impactTableDatum)
 
 
 
-    # Create dataframe(df) of the HTML table in question, using pandas
-    df = pd.read_html(url, header=0, attrs = {'id': everyoutage['HtmlId']})[0]
-    # printing dataframe for QA purposes
-    print(df)
 
 
-
-    # create a csv and insert the dataframe(df)
-    df.to_csv( everyoutage['CsvPath'] )
-  else:
-    noOutageMessage = soup.find("div", {"id": everyoutage['IfNoOutageId']}).find("div").find("div").text
-    # Print to terminal for QA purposes
-    print(noOutageMessage)
-    # Create the csv
-    csv = csv.writer(open(csvpath, 'w', newline=''))
-    # Write the message to the csv
-    csv.writerow(noOutageMessage)
-
-
-# # =======================
-# # GAS OUTAGE
-# # gas is a little different than the others(no impact column), so it's own function
-# # =======================
-# if (soup.find("table", {"id": GasOutage['HtmlId']})):
-#   # Print to terminal for QA purposes
-#   print( GasOutage['IfOutageMessage'] )
-#   # Create dataframe(df) of the HTML table in question, using pandas
-#   df = pd.read_html(url, header=0, attrs = {'id': GasOutage['HtmlId']})[0]
-#   # printing dataframe for QA purposes
-#   print(df)
-#   # create a csv and insert the dataframe(df)
-#   df.to_csv( GasOutage['CsvPath'] )
-# else:
-#   noOutageMessage = soup.find("div", {"id": GasOutage['IfNoOutageId']}).find("div").find("div").text
-#   # Print to terminal for QA purposes
-#   print(noOutageMessage)
-#   # Create the csv
-#   csv = csv.writer(open(csvpath, 'w', newline=''))
-#   # Write the message to the csv
-#   csv.writerow(noOutageMessage)
 
 
