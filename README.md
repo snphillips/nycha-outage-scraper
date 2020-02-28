@@ -4,6 +4,10 @@ The New York City Housing Authority (NYCHA) maintains a page on their site that 
 
 NYCHA Service Outages Page: https://my.nycha.info/Outages/Outages.aspx
 
+## How to Use
+(insert how to instructions)
+
+
 ## Built With
 - python
 - beautiful soup
