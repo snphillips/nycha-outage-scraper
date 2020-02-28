@@ -1,0 +1,13 @@
+,Address,Interruption,Planned,Reported On,Restoration Time,Impact
+0,"BUSHWICK - Building 07  140 MOORE STREET  BROOKLYN, NY 11206",Hot Water  Water,Unplanned  Unplanned,02/27/2020 4:00 PM,7 Hours,BuildingsUnitsPopulation  1113297
+1,"FORT INDEPENDENCE STREET-HEATH AVENUE 3353 FORT INDEPENDENCE STREET  BRONX, NY 10463  Line R",Water,Unplanned,02/27/2020 4:02 PM,0 Hours,BuildingsUnitsPopulation  11429
+2,"FORT INDEPENDENCE STREET-HEATH AVENUE - Building 01  3340 BAILEY AVENUE  BRONX, NY 10463",Hot Water,Unplanned,02/27/2020 8:39 AM,6 Hours,BuildingsUnitsPopulation  1344709
+3,"GOWANUS 241 HOYT STREET  BROOKLYN, NY 11217",Water,Unplanned,02/26/2020 4:04 PM,23 Hours,BuildingsUnitsPopulation  162129
+4,"HABER - Building 01  3058 WEST 24TH STREET  BROOKLYN, NY 11224",Water,Planned,02/27/2020 7:30 AM,8 Hours,BuildingsUnitsPopulation  1128141
+5,"JUSTICE SONIA SOTOMAYOR HOUSES - Building 24  1810 WATSON AVENUE  BRONX, NY 10472",Hot Water,Unplanned,02/27/2020 11:30 AM,10 Hours,BuildingsUnitsPopulation  148105
+6,"O'DWYER GARDENS - Building 02  3309 SURF AVENUE  BROOKLYN, NY 11224",Heat,Planned,02/27/2020 9:00 AM,9 Hours,BuildingsUnitsPopulation  187126
+7,"PATTERSON - Building 14  2635 3RD AVENUE  BRONX, NY 10451",Hot Water,Unplanned,02/27/2020 11:00 AM,10 Hours,BuildingsUnitsPopulation  184214
+8,"PATTERSON - Building 12  325 EAST 143RD STREET  BRONX, NY 10451",Heat,Planned,02/27/2020 8:00 AM,7 Hours,BuildingsUnitsPopulation  1208435
+9,"PELHAM PARKWAY - Entire Development  910 MACE AVENUE  BRONX, NY 10469",Heat  Hot Water,Unplanned  Unplanned,02/27/2020 7:00 AM,7 Hours,"BuildingsUnitsPopulation  231,2662,453"
+10,"TILDEN 275 LIVONIA AVENUE  BROOKLYN, NY 11212  Line E",Water,Unplanned,02/27/2020 9:43 AM,5 Hours,BuildingsUnitsPopulation  11662
+11,"TOMPKINS - Entire Development  65 TOMPKINS AVENUE  BROOKLYN, NY 11206",Water,Planned,02/27/2020 10:00 AM,3 Hours,"BuildingsUnitsPopulation  91,0462,788"

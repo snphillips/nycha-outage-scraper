@@ -1,0 +1,13 @@
+,Interruption,Planned,Reported On,Restoration Time,Impact
+0,Hot Water  Water,Unplanned  Unplanned,02/27/2020 4:00 PM,7 Hours,BuildingsUnitsPopulation  1113297
+1,Hot Water,Unplanned,02/27/2020 8:39 AM,6 Hours,BuildingsUnitsPopulation  1344709
+2,Water,Unplanned,02/27/2020 4:02 PM,0 Hours,BuildingsUnitsPopulation  11429
+3,Water,Unplanned,02/26/2020 4:04 PM,23 Hours,BuildingsUnitsPopulation  162129
+4,Water,Planned,02/27/2020 7:30 AM,8 Hours,BuildingsUnitsPopulation  1128141
+5,Hot Water,Unplanned,02/27/2020 11:30 AM,10 Hours,BuildingsUnitsPopulation  148105
+6,Heat,Planned,02/27/2020 9:00 AM,9 Hours,BuildingsUnitsPopulation  187126
+7,Hot Water,Unplanned,02/27/2020 11:00 AM,10 Hours,BuildingsUnitsPopulation  184214
+8,Heat,Planned,02/27/2020 8:00 AM,7 Hours,BuildingsUnitsPopulation  1208435
+9,Heat  Hot Water,Unplanned  Unplanned,02/27/2020 7:00 AM,7 Hours,"BuildingsUnitsPopulation  231,2662,453"
+10,Water,Unplanned,02/27/2020 9:43 AM,5 Hours,BuildingsUnitsPopulation  11662
+11,Water,Planned,02/27/2020 10:00 AM,3 Hours,"BuildingsUnitsPopulation  91,0462,788"

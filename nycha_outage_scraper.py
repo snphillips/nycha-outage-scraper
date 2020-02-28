@@ -127,13 +127,14 @@ outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWa
 for everyoutage in outages:
     if (soup.find("table", {"id": everyoutage['HtmlId']})):
       # Print to terminal for QA purposes
-      print( everyoutage['IfOutageMessage'] )
+      # print( everyoutage['IfOutageMessage'] )
       # Create dataframe(df) of the HTML table in question, using pandas
       df = pd.read_html(url, header=0, attrs = {'id': everyoutage['HtmlId']})[0]
       # printing dataframe for QA purposes
       print(df)
       # create a csv and insert the dataframe(df)
-      df.to_csv( everyoutage['CsvPath'] )
+      df.to_csv( everyoutage['CsvPath'], index=False )
+
     else:
       noOutageMessage = soup.find("div", {"id": everyoutage['IfNoOutageId']}).find("div").text
       # Print to terminal for QA purposes
@@ -146,25 +147,25 @@ for everyoutage in outages:
 
 
 
+    # =======================
+    # We must sort out the issue of the nested impact table
+    # =======================
+
+    # impactTable = soup.find("table", {"id": everyoutage['HtmlId']}).find("table", {"class": "nested"})
+    # # print("impactTable", impactTable)
+    # impactTableHeaders = impactTable.find_all("th")
+
+    # for impactTableHeader in impactTableHeaders:
+    #   impactTableHeader = str(impactTableHeader.text) + '/'
+    #   print("impactTableHeader", impactTableHeader)
 
 
+    # impactTableData = impactTable.find_all("td")
+    # print("impactTableData", impactTableData)
 
-    # Before creating the dataframe, we must sort out the issue of the nested impact table
-    impactTable = soup.find("table", {"id": everyoutage['HtmlId']}).find("table", {"class": "nested"})
-    # print("impactTable", impactTable)
-    impactTableHeaders = impactTable.find_all("th")
-
-    for impactTableHeader in impactTableHeaders:
-      impactTableHeader = str(impactTableHeader.text) + '/'
-      print("impactTableHeader", impactTableHeader)
-
-
-    impactTableData = impactTable.find_all("td")
-    print("impactTableData", impactTableData)
-
-    for impactTableDatum in impactTableData:
-      impactTableDatum = str(impactTableDatum.text) + '/'
-      print("impactTableData", impactTableDatum)
+    # for impactTableDatum in impactTableData:
+    #   impactTableDatum = str(impactTableDatum.text) + '/'
+    #   print("impactTableData", impactTableDatum)
 
 
 
