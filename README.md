@@ -10,10 +10,6 @@ note: you'll need python installed on your computer
 
 - Clone this repo then navigate into the project folder
 
-- You will need the following python packages installed: requests, bs4, datetime, pytz, csv, pathlib & pandas. To do that, in your terminal run:
-
-`pip install -r requirements.txt`
-
 - To build the virtual environment run:
 
 `python3 -m venv nycha-outages-scraper2`
@@ -21,6 +17,11 @@ note: you'll need python installed on your computer
 - To activate the virtual environment, run:
 
 `source nycha-outages-scraper2/bin/activate`
+
+- You will need the following python packages installed: requests, bs4, datetime, pytz, csv, pathlib & pandas. 
+To do that, in your terminal run:
+
+`pip install -r requirements.txt`
 
 - To run the scraper:
 
