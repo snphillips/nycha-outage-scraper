@@ -127,7 +127,7 @@ outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWa
 for everyoutage in outages:
     if (soup.find("table", {"id": everyoutage['HtmlId']})):
       # Print to terminal for QA purposes
-      # print( everyoutage['IfOutageMessage'] )
+      print( everyoutage['IfOutageMessage'] )
       # Create dataframe(df) of the HTML table in question, using pandas
       df = pd.read_html(url, header=0, attrs = {'id': everyoutage['HtmlId']})[0]
       # printing dataframe for QA purposes
