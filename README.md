@@ -6,12 +6,15 @@ NYCHA Service Outages Page: https://my.nycha.info/Outages/Outages.aspx
 
 ## How to Use
 1) Navigate to the project folder and use the following command to build the virtual environment:
+
 `python3 -m venv nycha-outages-scraper2`
 
 2) To activate the virtual environment, input the following command in the terminal:
+
 `source nycha-outages-scraper2/bin/activate`
 
 3) Run code by inputting the following command in the terminal:
+
 `python3 nycha_outage_scraper.py`
 
 
