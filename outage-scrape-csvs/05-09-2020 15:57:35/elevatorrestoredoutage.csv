@@ -13,7 +13,7 @@ Address,Interruption,Planned,Reported On,Restoration Time,Impact
 "BREVOORT - Building 01  292 RALPH AVENUE  BROOKLYN, NY 11233",Elevator NO SERVICE,Unplanned,05/08/2020 10:51 AM,2 Hours,BuildingsUnitsPopulation  13382
 "BRONX RIVER ADDITION - Building 11  1350 MANOR AVENUE  BRONX, NY 10472",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 11:48 AM,3 Hours,BuildingsUnitsPopulation  1156153
 "BROWNSVILLE - Building 07  289 BLAKE AVENUE  BROOKLYN, NY 11212",Elevator NO SERVICE,Unplanned,05/08/2020 5:48 AM,5 Hours,BuildingsUnitsPopulation  13696
-"CAMPOS PLAZA II - Building 04  612 EAST 14TH STREET  NEW YORK, NY 10009",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 5:50 AM,6 Hours,BuildingsUnitsPopulation  1128255
+"CAMPOS PLAZA II - Building 04  612 EAST 14TH STREET  NEW YORK, NY 10009",Elevator PARTIAL SERVICE,Unplanned,05/09/2020 1:01 PM,2 Hours,BuildingsUnitsPopulation  1128255
 "CAREY GARDENS - Building 01  2946 WEST 23RD STREET  BROOKLYN, NY 11224",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 11:21 AM,9 Hours,BuildingsUnitsPopulation  1243523
 "CASTLE HILL - Building 12  2280 RANDALL AVENUE  BRONX, NY 10473",Elevator PARTIAL SERVICE,Unplanned,05/06/2020 1:39 PM,45 Hours,BuildingsUnitsPopulation  1142319
 "CASTLE HILL - Building 14  535 HAVEMEYER AVENUE  BRONX, NY 10473",Elevator PARTIAL SERVICE,Unplanned,05/09/2020 7:53 AM,3 Hours,BuildingsUnitsPopulation  1157383
@@ -22,17 +22,18 @@ Address,Interruption,Planned,Reported On,Restoration Time,Impact
 "CLINTON - Building 03  1738 LEXINGTON AVENUE  NEW YORK, NY 10029",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 1:00 PM,2 Hours,BuildingsUnitsPopulation  1139323
 "CONEY ISLAND I (SITE 8) - Building 01  2950 WEST 35TH STREET  BROOKLYN, NY 11224",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 7:47 AM,6 Hours,BuildingsUnitsPopulation  175272
 "CONEY ISLAND I (SITES 4 & 5) - Building 01  2926 WEST 25TH STREET  BROOKLYN, NY 11224",Elevator PARTIAL SERVICE,Unplanned,05/07/2020 3:43 AM,33 Hours,BuildingsUnitsPopulation  172176
-"CYPRESS HILLS - Building 11  700 EUCLID AVENUE  BROOKLYN, NY 11208",Elevator NO SERVICE,Unplanned,05/09/2020 8:13 AM,2 Hours,BuildingsUnitsPopulation  14984
 "CYPRESS HILLS - Building 12  730 EUCLID AVENUE  BROOKLYN, NY 11208",Elevator NO SERVICE,Unplanned,05/08/2020 6:43 PM,3 Hours,BuildingsUnitsPopulation  149108
+"CYPRESS HILLS - Building 11  700 EUCLID AVENUE  BROOKLYN, NY 11208",Elevator NO SERVICE,Unplanned,05/09/2020 8:13 AM,2 Hours,BuildingsUnitsPopulation  14984
 "DAVIDSON - Building 01  818 HOME STREET  BRONX, NY 10459",Elevator NO SERVICE,Unplanned,05/09/2020 10:04 AM,1 Hours,BuildingsUnitsPopulation  1119412
 "DREW-HAMILTON - Building 01  2660 F DOUGLASS BOULEVARD  NEW YORK, NY 10030",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 11:31 AM,2 Hours,BuildingsUnitsPopulation  1249556
-"DYCKMAN - Building 01  177 NAGLE AVENUE  NEW YORK, NY 10034",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 12:20 PM,2 Hours,BuildingsUnitsPopulation  1165294
 "DYCKMAN - Building 07  3784 10TH AVENUE  NEW YORK, NY 10034",Elevator PARTIAL SERVICE,Unplanned,05/07/2020 9:17 PM,13 Hours,BuildingsUnitsPopulation  1168307
+"DYCKMAN - Building 01  177 NAGLE AVENUE  NEW YORK, NY 10034",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 12:20 PM,2 Hours,BuildingsUnitsPopulation  1165294
 "EAST RIVER - Building 06  405 EAST 102ND STREET  NEW YORK, NY 10029",Elevator NO SERVICE,Unplanned,05/08/2020 9:58 AM,4 Hours,BuildingsUnitsPopulation  13048
 "EDENWALD - Building 15  1141 EAST 229TH STREET  BRONX, NY 10466",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 8:19 AM,2 Hours,BuildingsUnitsPopulation  1110248
 "FARRAGUT - Building 06  224 YORK STREET  BROOKLYN, NY 11201",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 9:50 AM,3 Hours,BuildingsUnitsPopulation  1130289
 "FOREST - Building 02  1020 TRINITY AVENUE  BRONX, NY 10456",Elevator PARTIAL SERVICE,Unplanned,05/07/2020 11:19 AM,16 Hours,BuildingsUnitsPopulation  1111248
 "FULTON - Building 09  420 WEST 19TH STREET  NEW YORK, NY 10011",Elevator PARTIAL SERVICE,Unplanned,05/07/2020 6:10 PM,19 Hours,BuildingsUnitsPopulation  1219346
+"GLENWOOD - Building 12  5901 GLENWOOD ROAD  BROOKLYN, NY 11234",Elevator NO SERVICE,Unplanned,05/09/2020 11:57 AM,4 Hours,BuildingsUnitsPopulation  13057
 "GOWANUS - Building 06  195 HOYT STREET  BROOKLYN, NY 11217",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 4:32 PM,6 Hours,BuildingsUnitsPopulation  197242
 "GOWANUS - Building 08  414 BALTIC STREET  BROOKLYN, NY 11217",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 7:08 AM,5 Hours,BuildingsUnitsPopulation  197241
 "GRAMPION - Building 01  182 SAINT NICHOLAS AVENUE  NEW YORK, NY 10026",Elevator NO SERVICE,Unplanned,05/08/2020 9:00 AM,2 Hours,BuildingsUnitsPopulation  13567
@@ -64,6 +65,7 @@ Address,Interruption,Planned,Reported On,Restoration Time,Impact
 "MORRISANIA - Building 01  450 EAST 169TH STREET  BRONX, NY 10456",Elevator PARTIAL SERVICE,Unplanned,05/07/2020 6:24 PM,17 Hours,BuildingsUnitsPopulation  1104287
 "MOTT HAVEN - Building 03  353 EAST 141ST STREET  BRONX, NY 10454",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 1:27 PM,5 Hours,BuildingsUnitsPopulation  1130295
 "MOTT HAVEN - Building 07  355 EAST 143RD STREET  BRONX, NY 10454",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 3:10 PM,5 Hours,BuildingsUnitsPopulation  1117276
+"MOTT HAVEN - Building 08  383 EAST 143RD STREET  BRONX, NY 10454",Elevator PARTIAL SERVICE,Unplanned,05/09/2020 11:20 AM,4 Hours,BuildingsUnitsPopulation  1117279
 "MOTT HAVEN - Building 01  388 EAST 141ST STREET  BRONX, NY 10454",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 7:20 PM,4 Hours,BuildingsUnitsPopulation  1117266
 "MOTT HAVEN - Building 04  340 ALEXANDER AVENUE  BRONX, NY 10454",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 10:11 AM,25 Hours,BuildingsUnitsPopulation  1122398
 "MOTT HAVEN - Building 05  350 EAST 143RD STREET  BRONX, NY 10454",Elevator PARTIAL SERVICE,Unplanned,05/09/2020 9:47 AM,4 Hours,BuildingsUnitsPopulation  1130352
@@ -83,17 +85,20 @@ Address,Interruption,Planned,Reported On,Restoration Time,Impact
 "SAINT NICHOLAS - Building 08  2410 F DOUGLASS BOULEVARD  NEW YORK, NY 10027",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 4:16 PM,3 Hours,BuildingsUnitsPopulation  1108237
 "SAINT NICHOLAS - Building 07  255 WEST 127TH STREET  NEW YORK, NY 10027",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 5:13 PM,11 Hours,BuildingsUnitsPopulation  1111262
 "SMITH - Building 03  182 SOUTH STREET  NEW YORK, NY 10038",Elevator NO SERVICE,Unplanned,05/07/2020 11:31 PM,4 Hours,BuildingsUnitsPopulation  1160327
+"SOUNDVIEW - Building 04  1670 SEWARD AVENUE  BRONX, NY 10473",Elevator NO SERVICE,Unplanned,05/09/2020 10:55 AM,5 Hours,BuildingsUnitsPopulation  149105
 "SUMNER - Building 10  979 MYRTLE AVENUE  BROOKLYN, NY 11206",Elevator NO SERVICE,Unplanned,05/07/2020 7:52 PM,9 Hours,BuildingsUnitsPopulation  13681
+"SURFSIDE GARDENS - Building 05  2820 WEST 32ND STREET  BROOKLYN, NY 11224",Elevator PARTIAL SERVICE,Unplanned,05/09/2020 9:43 AM,6 Hours,BuildingsUnitsPopulation  1108193
 "TAYLOR STREET-WYTHE AVENUE - Building 03  611 WYTHE AVENUE  BROOKLYN, NY 11211",Elevator PARTIAL SERVICE,Unplanned,05/09/2020 8:35 AM,3 Hours,BuildingsUnitsPopulation  188164
 "TILDEN - Building 07  305 LIVONIA AVENUE  BROOKLYN, NY 11212",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 3:24 PM,8 Hours,BuildingsUnitsPopulation  1126300
-"TOMPKINS - Building 03  196 THROOP AVENUE  BROOKLYN, NY 11206",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 11:18 AM,2 Hours,BuildingsUnitsPopulation  161154
 "TOMPKINS - Building 04  212 THROOP AVENUE  BROOKLYN, NY 11206",Elevator PARTIAL SERVICE,Unplanned,05/07/2020 9:42 AM,27 Hours,BuildingsUnitsPopulation  1123330
+"TOMPKINS - Building 03  196 THROOP AVENUE  BROOKLYN, NY 11206",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 11:18 AM,2 Hours,BuildingsUnitsPopulation  161154
 "UNITY PLAZA (SITES 17-24-25A)2 - Building 03  611 BLAKE AVENUE  BROOKLYN, NY 11207",Elevator NO SERVICE,Unplanned,05/07/2020 11:53 PM,6 Hours,BuildingsUnitsPopulation  155175
 "UNITY PLAZA (SITES 4-27) - Building 02  545 DUMONT AVENUE  BROOKLYN, NY 11207",Elevator NO SERVICE,Unplanned,05/08/2020 7:21 PM,3 Hours,BuildingsUnitsPopulation  147105
 "VAN DYKE I - Building 11  372 BLAKE AVENUE  BROOKLYN, NY 11212",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 3:49 PM,4 Hours,BuildingsUnitsPopulation  1108241
 "VAN DYKE I - Building 01  414 SUTTER AVENUE  BROOKLYN, NY 11212",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 11:13 AM,2 Hours,BuildingsUnitsPopulation  1112241
 "WAGNER - Building 09  2360 1ST AVENUE  NEW YORK, NY 10035",Elevator PARTIAL SERVICE,Unplanned,05/07/2020 10:33 PM,14 Hours,BuildingsUnitsPopulation  1120265
 "WALD - Building 14  691 FDR DRIVE  NEW YORK, NY 10009",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 1:48 PM,2 Hours,BuildingsUnitsPopulation  1125271
+"WASHINGTON - Building 03  1895 2ND AVENUE  NEW YORK, NY 10029",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 7:23 PM,20 Hours,BuildingsUnitsPopulation  1109220
 "WEBSTER - Building 02  420 EAST 169TH STREET  BRONX, NY 10456",Elevator PARTIAL SERVICE,Unplanned,05/09/2020 2:40 AM,3 Hours,BuildingsUnitsPopulation  1122260
 "WHITMAN - Building 05  104 CARLTON AVENUE  BROOKLYN, NY 11205",Elevator NO SERVICE,Unplanned,05/09/2020 11:06 AM,2 Hours,BuildingsUnitsPopulation  14874
 "WYCKOFF GARDENS - Building 02  185 NEVINS STREET  BROOKLYN, NY 11217",Elevator PARTIAL SERVICE,Unplanned,05/08/2020 3:27 PM,3 Hours,BuildingsUnitsPopulation  1174365

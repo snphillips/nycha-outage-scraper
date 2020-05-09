@@ -3,14 +3,21 @@
 # Import libraries
 # =======================
 import requests
+
 from bs4 import BeautifulSoup
+
 from datetime import datetime
+
 import pytz
 from pytz import timezone
-import csv
-from pathlib import Path
-import pandas as pd
 
+import csv
+# https://docs.python.org/3/library/csv.html
+
+from pathlib import Path
+
+import pandas as pd
+# https://pandas.pydata.org/
 
 # Fetch the html file
 url = 'https://my.nycha.info/Outages/Outages.aspx'
@@ -73,7 +80,7 @@ RestoredElevator = {
   'CsvPath': 'outage-scrape-csvs/' + timeofscrape + '/elevatorrestoredoutage.csv',
   'HtmlId': 'ctl00_ContentPlaceHolder1_elevatorOutagesList_grvOutagesClosedIn24Hours',
   'IfOutageMessage': 'There were elevator outages restored within last 24hrs.',
-  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_elevatorOutagesList_panNoPlannedOutages'
+  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_elevatorOutagesList_panNoOutagesClosedIn24Hours'
 }
 
 PlannedElevator = {
@@ -97,14 +104,14 @@ RestoredElectric = {
   'CsvPath': 'outage-scrape-csvs/' + timeofscrape + '/electricrestoredoutage.csv',
   'HtmlId': 'ctl00_ContentPlaceHolder1_electricOutagesList_grvOutagesClosedIn24Hours',
   'IfOutageMessage': 'There were electric outages restored within last 24hrs.',
-  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_electricOutagesList_panNoPlannedOutages'
+  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_electricOutagesList_panNoOutagesClosedIn24Hours'
 }
 
 PlannedElectric = {
   'CsvPath': 'outage-scrape-csvs/' + timeofscrape + '/electricplannedoutages.csv',
   'HtmlId': 'ctl00_ContentPlaceHolder1_electricOutagesList_grvOutagesPlanned',
   'IfOutageMessage': 'There are electric outages planned.',
-  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_electricOutagesList_panNoOutagesPlanned'
+  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_electricOutagesList_panNoPlannedOutages'
 }
 
 # =======================
@@ -121,7 +128,6 @@ outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWa
 
 
 
-
 # =======================
 # 2) Iteraring over the outages list of dictionaries
 # "outages" is a list(array) of the above listed dictionaries
@@ -131,11 +137,11 @@ for everyoutage in outages:
     if (soup.find("table", {"id": everyoutage['HtmlId']})):
       # Print to terminal for QA purposes
       print( everyoutage['IfOutageMessage'] )
-      # Create dataframe(df) of the HTML table in question, using pandas
+      # Create dataframe (df) of the HTML table in question, using pandas (pd)
       df = pd.read_html(url, header=0, attrs = {'id': everyoutage['HtmlId']})[0]
-      # printing dataframe for QA purposes
+      # printing dataframe (df) for QA purposes
       print(df)
-      # create a csv and insert the dataframe(df)
+      # create a csv and insert the dataframe (df)
       df.to_csv( everyoutage['CsvPath'], index=False )
 
     else:
@@ -143,9 +149,9 @@ for everyoutage in outages:
       # Print to terminal for QA purposes
       print(noOutageMessage)
       # Create the csv
-      csv = csv.writer(open(everyoutage['CsvPath'], 'w', newline=''))
+      thecsv = csv.writer(open(everyoutage['CsvPath'], 'w', newline=''))
       # Write the message to the csv
-      csv.writerow([noOutageMessage])
+      thecsv.writerow([noOutageMessage])
 
 
 
