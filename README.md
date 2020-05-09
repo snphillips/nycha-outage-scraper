@@ -34,12 +34,12 @@ To check if the scrape is successful, open the directory called outage-scrape-cs
 
 Here's what a csv with outages looks like:
 
-<img src="https://i.imgur.com/3CmQKwE.png" width="500" alt="screengrab of app">
+<img src="https://i.imgur.com/3CmQKwE.png" width="600" alt="screengrab of csv with data">
 
 
 Here's what a csv *without* outages looks like:
 
-<img src="https://i.imgur.com/1y4g93S.png" width="500" alt="screengrab of app">
+<img src="https://i.imgur.com/1y4g93S.png" width="600" alt="screengrab of csv if no data">
 
 
 ## Built With
