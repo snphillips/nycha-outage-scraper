@@ -34,7 +34,7 @@ If you've made it this far, you've completed set-up. Now you are ready to scrape
 
 The scraping isn't instant. On my system it takes 20 seconds. You can view the progress in your terminal.
 
-To check if the scrape is successful, open the directory called outage-scrape-csvs.  In there you see an other directory named with the timestamp of the scrape. Within the timestamped folder, there should be 10 csvs. Each csv represents a type of outage.
+To check if the scrape is successful, open the directory called *outage-scrape-csvs*.  In there you see an other directory named with the timestamp of the scrape. Within the timestamped folder, there should be 10 csvs. Each csv represents a type of outage.
 
 Here's what a csv *with outages* looks like:
 
