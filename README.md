@@ -51,3 +51,6 @@ Here's what a csv *without outages* looks like:
 - python
 - beautiful soup
 - pandas
+
+## TODO
+The "Impact" column has nested tables that need to be unpacked. Currently, all the impact data is squished together, rendering it useless.
