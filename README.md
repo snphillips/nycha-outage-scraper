@@ -24,7 +24,7 @@ Note: you'll need python installed on your computer. *Learn more here: https://w
 
 `pip install -r requirements.txt`
 
-- To run the scraper, in your terminal run:
+- To run the scraper, in your terminal run (this process can take up to 20 seconds):
 
 `python3 nycha_outage_scraper.py`
 
