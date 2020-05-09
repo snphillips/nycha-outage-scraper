@@ -24,11 +24,13 @@ Note: you'll need python installed on your computer. *Learn more here: https://w
 
 `pip install -r requirements.txt`
 
-- To run the scraper, in your terminal run (this process can take up to 20 seconds):
+- To run the scraper, in your terminal run:
 
 `python3 nycha_outage_scraper.py`
 
-- You'll know the scrape is successful if you see csv files in a folder called outage-scrape-csvs within the project folder. 
+The scraping can take up to a minute. You can view the progress in your terminal.
+
+- You'll know the scrape is successful if you see a csv file with the timestamp of the scrape as the folder name, within a folder called outage-scrape-csvs within the project folder. Within the timestamped folder, there should be 10 csvs. Each csv represents a type of outage.
 
 
 ## Built With
