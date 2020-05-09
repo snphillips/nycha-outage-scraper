@@ -30,7 +30,11 @@ Note: you'll need python installed on your computer. *Learn more here: https://w
 
 The scraping isn't instant. On my system it takes 20 seconds. You can view the progress in your terminal.
 
-You'll know the scrape is successful if you see a csv file with the timestamp of the scrape as the folder name, within a folder called outage-scrape-csvs within the project folder. Within the timestamped folder, there should be 10 csvs. Each csv represents a type of outage.
+To check if the scrape is successful, open the directory called outage-scrape-csvs.  In there you see an other directory named with the timestamp of the scrape. Within the timestamped folder, there should be 10 csvs. Each csv represents a type of outage.
+
+Here's what a csv with outages looks like:
+
+Here's what a csv *without* outages looks like:
 
 
 ## Built With
