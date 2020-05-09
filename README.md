@@ -26,7 +26,7 @@ Note: you'll need python installed on your computer. *Learn more here: https://w
 
 `pip install -r requirements.txt`
 
-If you've made it this far, set-up is complete and you are ready to scrapd.
+If you've made it this far, set-up is complete and you are ready to scrape data!
 
 - To run the scraper, in your terminal run:
 
