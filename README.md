@@ -38,6 +38,9 @@ Here's what a csv *with outages* looks like:
 
 <img src="https://i.imgur.com/3CmQKwE.png" width="800" alt="screengrab of csv with outage data">
 
+Or open the csv with your favorite csv-editing program:
+
+<img src="https://i.imgur.com/W97xMDy.png" width="800" alt="screengrab of csv with outage data">
 
 Here's what a csv *without outages* looks like:
 
