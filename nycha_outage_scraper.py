@@ -19,7 +19,8 @@ soup = BeautifulSoup(page.text, 'html.parser')
 
 
 # =======================
-# Create folder with date/time of scrape
+# 1) Create folder with date/time of scrape
+# When this script is run, a new folder will be created and given the name of the date/time of the scrape
 # =======================
 
 # datetime object containing current date and time, modifying with NYC timezone(pytz)
@@ -116,13 +117,15 @@ GasOutage = {
   'IfNoOutageId': 'ctl00_ContentPlaceHolder1_gasOutagesList_panNoOutages'
 }
 
-# outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWaterWater, CurrentElevator, RestoredElevator, PlannedElevator, CurrentElectric, RestoredElectric, PlannedElectric, GasOutage]
-outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWaterWater]
+outages = [CurrentHeatHotWaterWater, RestoredHeatHotWaterWater, PlannedHeatHotWaterWater, CurrentElevator, RestoredElevator, PlannedElevator, CurrentElectric, RestoredElectric, PlannedElectric, GasOutage]
+
 
 
 
 # =======================
-# Iteraring over the outages list of dictionaries
+# 2) Iteraring over the outages list of dictionaries
+# "outages" is a list(array) of the above listed dictionaries
+# We're iterating over every item in that list
 # =======================
 for everyoutage in outages:
     if (soup.find("table", {"id": everyoutage['HtmlId']})):
@@ -148,7 +151,8 @@ for everyoutage in outages:
 
 
     # =======================
-    # We must sort out the issue of the nested impact table
+    # TODO
+    # We must sort out the issue of the nested "impact" table
     # =======================
 
     # impactTable = soup.find("table", {"id": everyoutage['HtmlId']}).find("table", {"class": "nested"})
