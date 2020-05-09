@@ -33,10 +33,12 @@ The scraping isn't instant. On my system it takes 20 seconds. You can view the p
 To check if the scrape is successful, open the directory called outage-scrape-csvs.  In there you see an other directory named with the timestamp of the scrape. Within the timestamped folder, there should be 10 csvs. Each csv represents a type of outage.
 
 Here's what a csv with outages looks like:
+
 <img src="https://i.imgur.com/3CmQKwE.png" width="500" alt="screengrab of app">
 
 
 Here's what a csv *without* outages looks like:
+
 <img src="https://i.imgur.com/1y4g93S.png" width="500" alt="screengrab of app">
 
 
