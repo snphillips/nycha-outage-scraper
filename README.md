@@ -14,7 +14,7 @@ note: you'll need python installed on your computer
 
 `python3 -m venv nycha-outages-scraper2`
 
-- To activate the virtual environment, run:
+- To activate the virtual environment, in your terminal run:
 
 `source nycha-outages-scraper2/bin/activate`
 
@@ -23,7 +23,7 @@ To do that, in your terminal run:
 
 `pip install -r requirements.txt`
 
-- To run the scraper:
+- To run the scraper, in your terminal run:
 
 `python3 nycha_outage_scraper.py`
 
