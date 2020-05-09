@@ -28,6 +28,8 @@ Note: you'll need python installed on your computer. *Learn more here: https://w
 
 `python3 nycha_outage_scraper.py`
 
+- You'll know the scrape is successful if you see in the project folder. 
+
 
 ## Built With
 - python
