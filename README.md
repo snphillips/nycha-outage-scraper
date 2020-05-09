@@ -6,7 +6,8 @@ NYCHA Service Outages Page: https://my.nycha.info/Outages/Outages.aspx
 
 ## How to Use
 
-note: you'll need python installed on your computer
+Note: you'll need python installed on your computer
+Learn more here: https://www.python.org/
 
 - Clone this repo then navigate into the project folder
 
