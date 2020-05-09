@@ -22,7 +22,7 @@ Note: you'll need python installed on your computer. *Learn more here: https://w
 
 `source nycha-outages-scraper2/bin/activate`
 
-- You will need the following python packages installed: requests, bs4, datetime, pytz, csv, pathlib & pandas.  These are all listed in requirements.txt.  To install those packages automatically, in your terminal run:
+- You will need the following python packages installed: *requests, bs4, datetime, pytz, csv, pathlib & pandas.*  These are all listed in requirements.txt.  To install those packages, in your terminal run:
 
 `pip install -r requirements.txt`
 
