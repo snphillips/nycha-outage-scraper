@@ -1,4 +1,4 @@
-# NYCHA Outages Scaper
+# NYCHA Outages Scraper
 
 The New York City Housing Authority (NYCHA) maintains a page on their site that lists services outages in thier developments for heat, hot water, water, elevators, electricity & gas. The outage site is updated regularly, however there is no easy way for stakeholders to download the data. 
 
@@ -10,21 +10,29 @@ NYCHA Service Outages Page: https://my.nycha.info/Outages/Outages.aspx
 
 Note: you'll need python installed on your computer. *Learn more here: https://www.python.org/about/gettingstarted/*
 
-- Clone this repo then navigate into the project folder
+- Clone this repo 
 
-`cd nycha-outages-scraper2`
+`git clone https://github.com/snphillips/nycha-outage-scraper.git`
+
+- Navigate into the project folder
+
+`cd nycha-outages-scraper`
 
 - To build the virtual environment, in your terminal run:
 
-`python3 -m venv nycha-outages-scraper2`
+`python3 -m venv nycha-outages-scraper`
 
 - To activate the virtual environment, in your terminal run:
 
-`source nycha-outages-scraper2/bin/activate`
+`source nycha-outages-scraper/bin/activate`
 
 - You will need the following python packages installed: *requests, bs4, datetime, pytz, csv, pathlib & pandas.*  These are all listed in requirements.txt.  To install those packages, in your terminal run:
 
 `pip install -r requirements.txt`
+
+Install lxml too
+
+`pip3 install lxml`
 
 If you've made it this far, you've completed set-up. Now you are ready to scrape data!
 
