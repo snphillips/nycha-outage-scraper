@@ -30,6 +30,10 @@ Note: you'll need python installed on your computer. *Learn more here: https://w
 
 `pip install -r requirements.txt`
 
+I had to install lxml too
+
+`pip3 install lxml`
+
 If you've made it this far, you've completed set-up. Now you are ready to scrape data!
 
 - To run the scraper, in your terminal run:
