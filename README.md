@@ -1,4 +1,4 @@
-# NYCHA Outages Scaper
+# NYCHA Outages Scraper
 
 The New York City Housing Authority (NYCHA) maintains a page on their site that lists services outages in thier developments for heat, hot water, water, elevators, electricity & gas. The outage site is updated regularly, however there is no easy way for stakeholders to download the data. 
 
