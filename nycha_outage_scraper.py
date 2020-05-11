@@ -63,7 +63,7 @@ PlannedHeatHotWaterWater = {
   'CsvPath': 'outage-scrape-csvs/' + timeofscrape + '/heathotwaterplannedoutages.csv',
   'HtmlId': 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_grvOutagesPlanned',
   'IfOutageMessage': 'There are heat & hot water outages planned.',
-  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_panNoOutagesPlanned'
+  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_heatHotWaterOutagesList_panNoPlannedOutages'
 }
 
 # =======================
@@ -87,7 +87,7 @@ PlannedElevator = {
   'CsvPath': 'outage-scrape-csvs/' + timeofscrape + '/elevatorplannedoutages.csv',
   'HtmlId': 'ctl00_ContentPlaceHolder1_elevatorOutagesList_grvOutagesPlanned',
   'IfOutageMessage': 'There are elevator outages planned.',
-  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_elevatorOutagesList_panNoOutagesPlanned'
+  'IfNoOutageId': 'ctl00_ContentPlaceHolder1_elevatorOutagesList_panNoPlannedOutages'
 }
 
 # =======================
