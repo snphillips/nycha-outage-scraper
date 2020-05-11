@@ -14,7 +14,7 @@ Note: you'll need python installed on your computer. *Learn more here: https://w
 
 `git clone https://github.com/snphillips/nycha-outage-scraper.git`
 
-Navigate into the project folder
+- Navigate into the project folder
 
 `cd nycha-outages-scraper`
 
