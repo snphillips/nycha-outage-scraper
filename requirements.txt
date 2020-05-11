@@ -4,3 +4,4 @@ datetime
 pytz
 pathlib
 pandas
+lxml
