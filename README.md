@@ -10,9 +10,13 @@ NYCHA Service Outages Page: https://my.nycha.info/Outages/Outages.aspx
 
 Note: you'll need python installed on your computer. *Learn more here: https://www.python.org/about/gettingstarted/*
 
-- Clone this repo then navigate into the project folder
+- Clone this repo 
 
-`cd nycha-outages-scraper2`
+`git clone https://github.com/snphillips/nycha-outage-scraper.git`
+
+Navigate into the project folder
+
+`cd nycha-outages-scraper`
 
 - To build the virtual environment, in your terminal run:
 
