@@ -22,6 +22,8 @@ Note: you'll need python installed on your computer. *Learn more here: https://w
 
 `python3 -m venv nycha-outage-scraper`
 
+(FYI, now you will see an other directory within the parent directory also with the name nycha-outage-scraper.)
+
 - To activate the virtual environment, in your terminal run:
 
 `source nycha-outages-scraper/bin/activate`
