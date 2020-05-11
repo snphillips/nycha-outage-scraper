@@ -20,7 +20,7 @@ Note: you'll need python installed on your computer. *Learn more here: https://w
 
 - To build the virtual environment, in your terminal run:
 
-`python3 -m venv nycha-outages-scraper`
+`python3 -m venv nycha-outage-scraper`
 
 - To activate the virtual environment, in your terminal run:
 
